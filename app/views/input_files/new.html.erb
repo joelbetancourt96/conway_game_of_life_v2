@@ -1,0 +1,5 @@
+<h1>Carica il File</h1>
+<%= form_with url: input_files_path, local: true, enctype: "multipart/form-data" do |f| %>
+  <%= f.file_field :file %>
+  <%= f.submit "Carica" %>
+<% end %>

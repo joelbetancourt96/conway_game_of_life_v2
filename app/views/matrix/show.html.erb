@@ -1,0 +1,11 @@
+<div id="grid">
+  <%= render partial: "grid", locals: { grid: @grid } %>
+</div>
+
+<button id="start-button">Start</button>
+
+<script>
+  document.getElementById("start-button").addEventListener("click", () => {
+    fetch("/matrix/start", { method: "POST" });
+  });
+</script>
